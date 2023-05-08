@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548638755832",
+    "project_id": "gossiper-3f703",
+    "storage_bucket": "gossiper-3f703.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548638755832:android:bfae69da33014625dc640d",
+        "android_client_info": {
+          "package_name": "com.example.gossiper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548638755832-slq9ls86avac9kd5pu66ketdng0bpjmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU7idUppfDG8L_JCDAyBnVQ46pBhHQeGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548638755832-slq9ls86avac9kd5pu66ketdng0bpjmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
