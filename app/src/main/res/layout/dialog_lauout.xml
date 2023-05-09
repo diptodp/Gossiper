@@ -13,15 +13,16 @@
         android:layout_height="@dimen/_45sdp"
         android:src="@drawable/logout"
         android:layout_gravity="center"
-        android:layout_margin="13dp"/>
+        android:layout_margin="13dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do you really want to \n Log out?"
+        android:text="Are you sure to Logout from \n GOSSIPER?"
         android:textSize="@dimen/_13sdp"
         android:gravity="center"
         android:layout_margin="@dimen/_8sdp"
-        android:fontFamily="@font/poppins_regular"/>
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,9 +34,11 @@
             android:layout_margin="@dimen/_13sdp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="No"
-            android:textColor="@color/black"
-            android:backgroundTint="#4CE195"/>
+            android:text="Cancel"
+            android:textColor="#315CF3"
+            android:backgroundTint="#CFD1D0"
+            android:textAllCaps="false"
+            android:textStyle="bold"/>
         <Button
             android:id="@+id/yesbnt"
             android:layout_width="match_parent"
@@ -43,9 +46,11 @@
             android:layout_margin="@dimen/_13sdp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Yes"
-            android:textColor="@color/black"
-            android:backgroundTint="#4CE195"/>
+            android:text="Log out"
+            android:textColor="#FF0909"
+            android:backgroundTint="#CFD1D0"
+            android:textAllCaps="false"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 
