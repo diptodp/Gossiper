@@ -71,27 +71,39 @@ public class MainActivity extends AppCompatActivity {
         imglogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dialog dialog=new Dialog(MainActivity.this,R.style.dialoge);
-                dialog.setContentView(R.layout.dialog_lauout);
-                Button no,yes;
-                yes=dialog.findViewById(R.id.yesbnt);
-                no=dialog.findViewById(R.id.nobnt);
-                yes.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        FirebaseAuth.getInstance().signOut();
-                        Intent intent=new Intent(MainActivity.this,login.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-                no.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+                if (!isFinishing()) { // Check if the Activity is still active
+                    Dialog dialog = new Dialog(MainActivity.this, R.style.dialoge);
+                    dialog.setContentView(R.layout.dialog_lauout);
+                    Button no, yes;
+                    yes = dialog.findViewById(R.id.yesbnt);
+                    no = dialog.findViewById(R.id.nobnt);
+
+                    dialog.show();
+
+                    yes.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            FirebaseAuth.getInstance().signOut();
+                            Intent intent = new Intent(getApplicationContext(), login.class);
+                            startActivity(intent);
+                            finish();
+                            dialog.dismiss();
+                        }
+                    });
+
+                    no.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+
+
+
+
+
+
+                }
             }
         });
 

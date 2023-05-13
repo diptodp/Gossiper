@@ -31,27 +31,32 @@
             android:id="@+id/recivername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gossiper"
-            android:gravity="center"
-            android:textColor="#98F4A2"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="20dp"
-            android:layout_margin="1dp"/>
+            android:gravity="center"
+            android:text="Gossiper"
+            android:textColor="#FDFDFD"
+            android:textSize="23dp" />
 
 
 
 
     </LinearLayout>
 
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msgadpter"
         android:layout_width="match_parent"
-        android:layout_height="543dp"
+        android:layout_height="534dp"
         android:layout_below="@+id/ll1"
-        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="180dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="64dp"
         android:padding="13dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="58.50dp"
@@ -61,6 +66,10 @@
         android:layout_marginTop="2.60dp"
         android:layout_marginBottom="2.60dp"
         android:layout_marginEnd="2.60dp">
+
+
+
+
 
 
         <androidx.cardview.widget.CardView
@@ -74,19 +83,21 @@
 
 
             <EditText
+                android:id="@+id/textmsg"
                 android:layout_width="338dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="@dimen/_15sdp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
                 android:background="@null"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="Type The Messages..."
-                android:paddingStart="13.00dp"/>
+                android:paddingStart="13.00dp" />
 
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/sendbtnn"
             android:layout_width="100.50dp"
             android:layout_height="45.50dp"
             android:background="@color/white"

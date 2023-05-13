@@ -42,16 +42,15 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mainActivity, chatwin.class);
-                intent.putExtra("nameeee", users.getUserName());
-                intent.putExtra("reciverImg", users.getProfilepic());
-                intent.putExtra("uid", users.getUserId());
+                Intent intent=new Intent(mainActivity,chatWin.class);
+                intent.putExtra("nameeee",users.getUserName());
+                intent.putExtra("reciverImg",users.getProfilepic());
+                intent.putExtra("uid",users.getUserId());
                 mainActivity.startActivity(intent);
             }
         });
 
-
-            }
+    }
 
     @Override
     public int getItemCount() {

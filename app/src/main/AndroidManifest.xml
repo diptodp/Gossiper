@@ -14,7 +14,7 @@
         android:theme="@style/Theme.GOSSIPER"
         tools:targetApi="31">
         <activity
-            android:name=".chatwin"
+            android:name=".chatWin"
             android:exported="false" />
         <activity
             android:name=".registration"
