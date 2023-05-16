@@ -16,8 +16,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileimgg"
-            android:layout_width="100dp"
-            android:layout_height="85dp"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
             android:layout_marginTop="8.10dp"
             android:src="@drawable/photocamera"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,10 +38,8 @@
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
             android:text="Gossiper"
-            android:textColor="#FDFDFD"
-            android:textSize="23dp" />
-
-
+            android:textColor="#F6DDDD"
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -50,11 +48,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/msgadpter"
         android:layout_width="match_parent"
-        android:layout_height="534dp"
+        android:layout_height="580dp"
         android:layout_below="@+id/ll1"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="-1dp"
-        android:layout_marginBottom="64dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="57dp"
         android:padding="13dp" />
 
     <LinearLayout
@@ -68,18 +69,15 @@
         android:layout_marginEnd="2.60dp">
 
 
-
-
-
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="45.50dp"
-            android:background="@color/white"
-            app:cardCornerRadius="32.50dp"
             android:layout_marginStart="6.50dp"
             android:layout_marginEnd="9.10dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:cardBackgroundColor="#EAE7E7"
+            app:cardCornerRadius="32.50dp">
 
 
             <EditText
@@ -100,17 +98,18 @@
             android:id="@+id/sendbtnn"
             android:layout_width="100.50dp"
             android:layout_height="45.50dp"
-            android:background="@color/white"
-            app:cardCornerRadius="32.50dp"
             android:layout_marginStart="6.50dp"
             android:layout_marginEnd="6.10dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:cardBackgroundColor="#EAE7E7"
+            app:cardCornerRadius="32.50dp">
 
             <ImageView
                 android:layout_width="19.50dp"
                 android:layout_height="19.50dp"
                 android:layout_gravity="center"
-                android:background="@drawable/sendbut"/>
+                android:background="@drawable/sendbut2" />
 
 
         </androidx.cardview.widget.CardView>
