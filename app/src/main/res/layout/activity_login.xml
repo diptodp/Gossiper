@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/profile" />
+        app:srcCompat="@drawable/profile2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -153,11 +153,12 @@
 
     <TextView
         android:id="@+id/logsignup"
-        android:layout_width="@dimen/_124sdp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:text="SIGN UP!"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:background="#534BC3"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
