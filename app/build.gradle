@@ -49,5 +49,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'androidx.biometric:biometric:1.1.0'
 
 }

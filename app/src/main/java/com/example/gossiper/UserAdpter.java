@@ -6,19 +6,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.concurrent.Executor;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
     MainActivity mainActivity;
     ArrayList<Users> usersArrayList;
+    private Executor executor;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
+
+
     public UserAdpter(MainActivity mainActivity, ArrayList<Users> usersArrayList) {
         this.mainActivity=mainActivity;
         this.usersArrayList=usersArrayList;
@@ -34,6 +43,13 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
     @Override
     public void onBindViewHolder(@NonNull UserAdpter.viewholder holder, int position) {
 
+       // TextView biometricLoginButton = findViewById(R.id.username);
+//        biometricLoginButton.setOnClickListener(view -> {
+//            biometricPrompt.authenticate(promptInfo);
+//        });
+
+
+
         Users users = usersArrayList.get(position);
         holder.username.setText(users.userName);
         holder.userstatus.setText(users.status);
@@ -46,11 +62,59 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
                 intent.putExtra("nameeee",users.getUserName());
                 intent.putExtra("reciverImg",users.getProfilepic());
                 intent.putExtra("uid",users.getUserId());
+                executor = ContextCompat.getMainExecutor(mainActivity);
+                biometricPrompt = new BiometricPrompt(mainActivity,
+                        executor, new BiometricPrompt.AuthenticationCallback() {
+                    @Override
+                    public void onAuthenticationError(int errorCode,
+                                                      @NonNull CharSequence errString) {
+                        super.onAuthenticationError(errorCode, errString);
+                        Toast.makeText(mainActivity.getApplicationContext(),
+                                        "Authentication error: " + errString, Toast.LENGTH_SHORT)
+                                .show();
+                    }
+
+                    @Override
+                    public void onAuthenticationSucceeded(
+                            @NonNull BiometricPrompt.AuthenticationResult result) {
+                        super.onAuthenticationSucceeded(result);
+                        Toast.makeText(mainActivity.getApplicationContext(),
+                                "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+
+//                        try {
+//                            mainActivity.startActivity(intent);
+//                        } catch (Exception e) {
+//                            Toast.makeText(mainActivity.getApplicationContext(),
+//                                    "Failed to Open New Activity page!", Toast.LENGTH_SHORT).show();
+//                            e.printStackTrace();
+//                        }
+
+                    }
+
+                    @Override
+                    public void onAuthenticationFailed() {
+                        super.onAuthenticationFailed();
+                        Toast.makeText(mainActivity.getApplicationContext(), "Authentication failed",
+                                        Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
+
+                promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                        .setTitle("Biometric login for my app")
+                        .setSubtitle("Log in using your biometric credential")
+                        .setNegativeButtonText("Use account password")
+                        .build();
+
+
+                    biometricPrompt.authenticate(promptInfo);
+
                 mainActivity.startActivity(intent);
             }
         });
 
     }
+
 
     @Override
     public int getItemCount() {
