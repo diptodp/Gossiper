@@ -43,7 +43,7 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
     @Override
     public void onBindViewHolder(@NonNull UserAdpter.viewholder holder, int position) {
 
-       // TextView biometricLoginButton = findViewById(R.id.username);
+        // TextView biometricLoginButton = findViewById(R.id.username);
 //        biometricLoginButton.setOnClickListener(view -> {
 //            biometricPrompt.authenticate(promptInfo);
 //        });
@@ -81,13 +81,13 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
                         Toast.makeText(mainActivity.getApplicationContext(),
                                 "Authentication succeeded!", Toast.LENGTH_SHORT).show();
 
-//                        try {
-//                            mainActivity.startActivity(intent);
-//                        } catch (Exception e) {
-//                            Toast.makeText(mainActivity.getApplicationContext(),
-//                                    "Failed to Open New Activity page!", Toast.LENGTH_SHORT).show();
-//                            e.printStackTrace();
-//                        }
+                        try {
+                            mainActivity.startActivity(intent);
+                        } catch (Exception e) {
+                            Toast.makeText(mainActivity.getApplicationContext(),
+                                    "Failed to Open New Activity page!", Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
+                        }
 
                     }
 
@@ -107,9 +107,9 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
                         .build();
 
 
-                    biometricPrompt.authenticate(promptInfo);
+                biometricPrompt.authenticate(promptInfo);
 
-                mainActivity.startActivity(intent);
+                //mainActivity.startActivity(intent);
             }
         });
 
@@ -133,5 +133,6 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
         }
     }
 }
+
 
 
