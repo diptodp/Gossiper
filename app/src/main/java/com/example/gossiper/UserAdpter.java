@@ -101,8 +101,8 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
                 });
 
                 promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                        .setTitle("Biometric login for my app")
-                        .setSubtitle("Log in using your biometric credential")
+                        .setTitle("           Verify your identity!")
+                        .setSubtitle("             GOSSIPER needs to verify it's you")
                         .setNegativeButtonText("Use account password")
                         .build();
 
