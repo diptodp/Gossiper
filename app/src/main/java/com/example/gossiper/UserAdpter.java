@@ -103,7 +103,7 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
                 promptInfo = new BiometricPrompt.PromptInfo.Builder()
                         .setTitle("           Verify your identity!")
                         .setSubtitle("             GOSSIPER needs to verify it's you")
-                        .setNegativeButtonText("Use account password")
+                        .setNegativeButtonText("Cancel")
                         .build();
 
 
