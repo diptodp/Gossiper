@@ -20,12 +20,15 @@
 
     <EditText
         android:id="@+id/settingname"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_230sdp"
         android:layout_height="wrap_content"
         android:layout_marginTop="216dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/settingstatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -35,11 +38,13 @@
 
     <EditText
         android:id="@+id/settingstatus"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_230sdp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="name"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -50,7 +55,7 @@
     <Button
         android:id="@+id/donebutt"
         android:backgroundTint="#3FF186"
-        android:layout_width="@dimen/_150sdp"
+        android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_40sdp"
         android:text="Save"
         android:textColor="@color/black"
