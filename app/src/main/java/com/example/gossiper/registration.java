@@ -82,7 +82,7 @@ public class registration extends AppCompatActivity {
                 String Password = rg_password.getText().toString();
                 String cPassword = rg_repassword.getText().toString();
                 String phone=rg_phonenumber.getText().toString();
-                String status = "Hey I'm Using This Application";
+                String status = "Hey Let's Connect & Chat!";
 
                 if (TextUtils.isEmpty(namee) || TextUtils.isEmpty(emaill) ||
                         TextUtils.isEmpty(Password) || TextUtils.isEmpty(cPassword)){
@@ -135,8 +135,8 @@ public class registration extends AppCompatActivity {
                                         }
                                     });
                                 }else {
-                                    String status = "Hey I'm Using This Application";
-                                    imageuri = "https://firebasestorage.googleapis.com/v0/b/gossiper-3f703.appspot.com/o/man.png?alt=media&token=6b4c8892-f7a7-4426-8e4f-12e95e5f58e0";
+                                    String status = "Hey Let's Connect & Chat!";
+                                    imageuri = "https://firebasestorage.googleapis.com/v0/b/gossiper-3f703.appspot.com/o/panda.jpg?alt=media&token=fccc2aab-c32e-4991-9218-ab1a68038e41&_gl=1*1pa4ewn*_ga*NzUwNjg3NjE4LjE2ODA4NzM2NTU.*_ga_CW55HF8NVT*MTY4NjY4NjA0OS45LjEuMTY4NjY4NjQwOC4wLjAuMA..";
                                     Users users = new Users(id,namee,emaill,Password,phone,imageuri,status);
                                     reference.setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
